@@ -8,18 +8,18 @@ Filtering by type: Users can filter the results by Pokemon type (e.g. fire, wate
 Responsive design: The app is designed to be easily accessible on different devices.
 Getting started
 
-To get started with Pokedex App, follow these steps:
-Clone this repository to your local machine using git clone https://github.com/your-username/pokedex-app.git
-Install dependencies by running npm install in your terminal.
-Start the app by running npm start in your terminal.
-Open http://localhost:3000 to view the app in your browser.
+
+
 Dependencies
 React
 React Router
 Axios
 Credits
+
 This app was built using the PokeAPI.
-The design of this app was inspired by the official Pokemon website.
+all credit to AC1design https://dribbble.com/shots/15128634-Pokemon-Pokedex-Website-Redesign-Concept
+for the design
+
 Contributing
 If you would like to contribute to this project, please open a pull request.
 
