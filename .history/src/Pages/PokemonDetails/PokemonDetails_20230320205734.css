@@ -1,0 +1,117 @@
+.mainPokedata{
+    background-color: white;
+    margin-top: 2rem;
+    padding: 0 auto;
+    border-radius: 10px;
+}
+
+.artworkAndType{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.sprite{
+    border: 1px solid black;
+    height: 5vw;
+    width: 5vw;
+    object-fit: contain;
+    border-radius: 0.4em;
+    margin: 0.4em;
+}
+.bar-chart{
+    background-color: rgb(118, 221, 92);
+    border-radius: 8px;
+}
+.pokeEntry{
+    margin-bottom: 0.5rem;
+    margin-left: 0.5rem;
+    font-size: 0.8em;
+}
+.officialArtWork{
+    height: 40vw;
+    max-height: 500px;
+
+}
+
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.statsTable{
+    min-width: 500px;
+    /* border: 1px solid black; */
+}
+
+.moves{
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: space-evenly; */
+    
+}
+table{
+    /* border: 1px solid black; */
+    padding: 0.5em 0.25em;
+    background-color: rgb(243, 239, 235);
+    border-radius: 10px;
+    font-size: 0.8rem;
+    margin: 0.5em 0.25em;
+}
+td{
+    /* border:  1px solid black; */
+    background-color: white;
+    border-radius: 10px;
+    padding: 0.2em 0.6em;
+    
+    /* font-size: 75%; */
+}
+
+th{
+    padding: 0.2em 0.6em;
+    /* margin-right: 0.2em; */
+    /* font-size: 75%; */
+}
+
+.flex{
+    display: flex;
+    flex-direction: column;
+}
+.pokedexEntries{
+    margin: 2rem 0;
+    
+}
+.pokeEntry{
+    background-color: rgb(243, 239, 235);
+    border-radius: 10px;
+    padding: 0.5em 0.25em;
+    /* max-width: 700px; */
+    margin-right: 0.25em;
+    margin-top: 0.8em;
+}
+/* .machineMovesTable{
+    max-height: 1000px;
+    overflow-y: scroll;
+} */
+
+.pokeEntryPrime{
+    font-size: 1rem;
+}
+
+.abilityItem{
+    width: 200px;
+    padding: 0.6em 1.2em;
+    background-color:  rgb(243, 239, 235) ;
+    margin:1rem;
+    font-weight: 700;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.faIcon{
+    cursor: pointer;
+}
+.Miscillaneous{
+    min-width: 30vw;
+}

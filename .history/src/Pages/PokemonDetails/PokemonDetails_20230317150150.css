@@ -1,0 +1,39 @@
+.sprite{
+    border: 1px solid black;
+    height: 5vw;
+    width: 5vw;
+    object-fit: contain;
+    border-radius: 0.4em;
+    margin: 0.4em;
+}
+.bar-chart{
+    background-color: rgb(118, 221, 92);
+    border-radius: 8px;
+}
+.pokeEntry{
+    margin-bottom: 0.5rem;
+    margin-left: 0.5rem;
+    font-size: 0.8em;
+}
+.officialArtWork{
+    max-height: 200px;
+}
+
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.statsTable{
+    min-width: 500px;
+    /* border: 1px solid black; */
+}
+
+.moves{
+    display: flex;
+    justify-content: space-evenly;
+    
+}
+table{
+    display: flex;
+}

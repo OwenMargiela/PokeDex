@@ -1,0 +1,7 @@
+.pokedexData{
+    background-color: white;
+}
+.typesFlex{
+    display: flex;
+    flex-direction: row;
+}

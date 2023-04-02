@@ -1,0 +1,10 @@
+.main {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 1rem;
+  /* min-width: none; */
+  min-height: calc(100vh - 3rem);
+  margin-bottom: 10rem;
+  border: 1px solid black;
+}

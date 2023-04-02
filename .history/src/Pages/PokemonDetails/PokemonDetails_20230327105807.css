@@ -1,0 +1,169 @@
+.mainPokedata{
+    background-color: white;
+    margin-top: 2rem;
+    padding: 0 auto;
+    border-radius: 10px;
+    width: 100%;
+}
+
+.artworkAndType{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.sprite{
+    border: 1px solid black;
+    height: 5vw;
+    width: 5vw;
+    object-fit: contain;
+    border-radius: 0.4em;
+    margin: 0.4em;
+    cursor: pointer;
+}
+.bar-chart{
+    background-color: rgb(118, 221, 92);
+    border-radius: 8px;
+}
+.pokeEntry{
+    margin-bottom: 0.5rem;
+    margin-left: 0.5rem;
+    font-size: 0.8em;
+}
+.officialArtWork{
+    height: 40vw;
+    max-height: 500px;
+
+}
+
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.statsTable{
+    min-width: 500px;
+    /* border: 1px solid black; */
+}
+
+.moves{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+}
+table{
+    border: 1px solid black;
+    padding: 0.5em 0.25em;
+    background-color: rgb(243, 239, 235);
+    border-radius: 10px;
+    font-size: 0.8rem;
+    margin: 0.5em 0.25em;
+    min-width: 50%;
+    
+}
+td{
+    /* border:  1px solid black; */
+    background-color: white;
+    border-radius: 10px;
+    padding: 0.2em 0.6em;
+    
+    /* font-size: 75%; */
+}
+
+th{
+    padding: 0.2em 0.6em;
+    /* margin-right: 0.2em; */
+    /* font-size: 75%; */
+}
+
+.flex{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.pokedexEntries{
+    margin: 2rem 0;
+    
+}
+.pokeEntry{
+    background-color: rgb(243, 239, 235);
+    border-radius: 10px;
+    padding: 0.5em 0.25em;
+    /* max-width: 700px; */
+    margin-right: 0.25em;
+    margin-top: 0.8em;
+}
+/* .machineMovesTable{
+    max-height: 1000px;
+    overflow-y: scroll;
+} */
+
+.pokeEntryPrime{
+    font-size: 1rem;
+}
+
+.abilityItem{
+    width: 200px;
+    padding: 0.6em 1.2em;
+    background-color:  rgb(243, 239, 235) ;
+    margin:1rem;
+    font-weight: 700;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.faIcon{
+    cursor: pointer;
+}
+
+.Miscillaneous{
+    min-width: 30vw;
+    min-height: 30vw;
+    font-size: 100%
+    ;
+}
+.modal {
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modal-content {
+    background-color: #fefefe;
+    
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px;
+    height: 200px;
+    position: relative;
+  }
+  
+  .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  .modalSprite{
+    min-height: 200px;
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+.center{
+    margin: 2rem auto;
+}

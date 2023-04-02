@@ -1,0 +1,12 @@
+.sprite{
+    border: 1px solid black;
+    height: 5vw;
+    width: 5vw;
+    object-fit: contain;
+    border-radius: 0.4em;
+    margin: 0.4em;
+}
+.cell-barchart{
+    background-color: black;
+    height: 1px;
+}

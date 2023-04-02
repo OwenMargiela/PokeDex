@@ -1,0 +1,6 @@
+.sprite{
+    border: 1px solid black;
+    height: 10vw;
+    width: 10vw;
+    object-fit: contain;
+}

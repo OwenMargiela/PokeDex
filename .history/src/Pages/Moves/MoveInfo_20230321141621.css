@@ -1,0 +1,10 @@
+.flex{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    
+}
+
+.moveDataTable{
+    margin-right: 2rem;
+}

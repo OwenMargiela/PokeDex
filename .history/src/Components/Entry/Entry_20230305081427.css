@@ -1,0 +1,103 @@
+.fW-700 {
+    font-weight: 700;
+  }
+  
+  .pokemonEntryContainer {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    /* overflow-y: scroll; */
+    height: 100%;
+    background-color: rgb(250, 250, 250);
+    border-radius: 2rem;
+    /* background: #e0e0e0; */
+    box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
+  }
+  
+  .pokemonImagePrime {
+    /* margin-top: 1rem; */
+    position: absolute;
+    width: 0%;
+    top: -95px;
+    transform: translateX(-50%);
+  }
+  .pokemonImage {
+    width: 10%;
+    cursor: pointer;
+  }
+  
+  .dexNumber,
+  .levelUpLevel {
+    font-size: 0.8rem;
+    color: gray;
+  }
+  .pokemonName {
+    font-size: 1.5rem;
+  }
+  
+  .typesList-abilitiesList {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 0.2rem;
+  }
+  .height,
+  .weight {
+    padding: 0.1em 0.4em;
+    border-radius: 0.4em;
+    background-color: rgb(226, 238, 238);
+    margin-bottom: 0.4em;
+  }
+  
+  .typesList-abilitiesList > li,
+  .weaknessList > li {
+    padding: 0 0.8em;
+    font-size: 0.75rem;
+    border: 1px solid black;
+    border-radius: 1em;
+    margin: 0 0.5rem;
+  }
+  .entryText {
+    font-weight: 500;
+    font-size: 0.75rem;
+    text-align: left;
+    padding-left: 0.4em;
+  }
+  .miscellaneousList {
+    display: flex;
+    flex-direction: column;
+    margin: 0.4rem 0;
+  }
+  .miscellaneousList > li {
+    font-size: 0.8rem;
+    /* border: 1px solid black; */
+  }
+  .weaknessList {
+    /* flex-wrap: wrap; */
+    display: flex;
+    justify-content: center;
+  }
+  
+  .statHeading{
+    display: flex;
+    flex-direction: row;
+    font-size: 0.8em;
+  }
+  .statHeading > span{
+    margin-left: 0.4em;
+  }
+  .statsList {
+    display: flex;
+    justify-content: center;
+  }
+  .statsList > li {
+    font-size: 0.7rem;
+    margin: 0.5em;
+  }
+  
+  .statsList > li > div {
+    display: flex;
+    flex-direction: column;
+  }
