@@ -24,7 +24,7 @@ function App() {
     getPokemon(url);
   }
 
-  async function valueSearch(id, pokemon) {
+  async function valueSearch(id,pokemon) {
     setValue(pokemon);
     const { data } = await axios.get(
       `https://pokeapi.co/api/v2/pokemon/${id}/`
@@ -75,55 +75,57 @@ function App() {
       <div className="column">
         <div className="row">
           <Navbar></Navbar>
-
-          <Routes>
-            <Route
-              path="/"
-              element={
-                <Home
-                  value={value}
-                  setValue={setValue}
-                  nextUrl={nextUrl}
-                  prevUrl={prevUrl}
-                  pagination={pagination}
+          
+          
+            <Routes>
+              <Route
+                path="/"
+                element={
+                  <Home
+                    value={value}
+                    setValue={setValue}
+                    nextUrl={nextUrl}
+                    prevUrl={prevUrl}
+                    pagination={pagination}
+                    valueSearch={valueSearch}
+                    pokeEntry={pokeEntry}
+                    pokedexText={pokedexText}
+                  ></Home>
+                }
+              ></Route>
+              <Route
+                path="pokemon/:id"
+                element={
+                  <PokemonDetails
                   valueSearch={valueSearch}
-                  pokeEntry={pokeEntry}
-                  pokedexText={pokedexText}
-                ></Home>
-              }
-            ></Route>
-            <Route
-              path="pokemon/:id"
-              element={
-                <PokemonDetails
-                  valueSearch={valueSearch}
-                  moves={moves}
-                  pokeEntry={pokeEntry}
-                  pokedexText={pokedexText}
-                ></PokemonDetails>
-              }
-            ></Route>
-            <Route
-              path="moves/:id"
-              element={<MoveInfo valueSearch={valueSearch}></MoveInfo>}
-            ></Route>
-            <Route
-              path="abilities/:id"
-              element={<Abilities valueSearch={valueSearch}></Abilities>}
-            ></Route>
-            <Route
-              path="type/:id"
-              element={<Type valueSearch={valueSearch}></Type>}
-            ></Route>
-            <Route
-              path="location/:id"
-              element={<Location valueSearch={valueSearch}></Location>}
-            ></Route>
-            <Route
-              path="generation/:id"
-              element={<Generation valueSearch={valueSearch}></Generation>}
-            ></Route>
-          </Routes>
+                    moves={moves}
+                    pokeEntry={pokeEntry}
+                    pokedexText={pokedexText}
+                  ></PokemonDetails>
+                }
+              ></Route>
+              <Route
+                path="moves/:id"
+                element={<MoveInfo valueSearch={valueSearch}></MoveInfo>}
+              ></Route>
+              <Route
+                path="abilities/:id"
+                element={<Abilities valueSearch={valueSearch}></Abilities>}
+              ></Route>
+              <Route
+                path="type/:id"
+                element={<Type valueSearch={valueSearch}></Type>}
+              ></Route>
+              <Route
+                path="location/:id"
+                element={<Location valueSearch={valueSearch}></Location>}
+              ></Route>
+              <Route
+                path="generation/:id"
+                element={<Generation  valueSearch={valueSearch}></Generation>}
+              ></Route>
+            </Routes>
+          
         </div>
       </div>
     </div>

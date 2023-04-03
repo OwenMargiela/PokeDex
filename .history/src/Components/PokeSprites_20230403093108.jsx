@@ -9,7 +9,7 @@ function PokeSprites({pokeSprite ,valueSearch}) {
         {pokeSprite?.species.map((pokemon, i) => (
           <>
             <div
-              onClick={() => valueSearch(pokemon.id, pokemon.species.name)}
+              onClick={() => valueSearch(pokemon.id, pokemon.name)}
               key={pokemon.id}
               className="icon"
             >

@@ -3,13 +3,12 @@ import { Link } from "react-router-dom";
 
 function PokeSprites({pokeSprite ,valueSearch}) {
   if (pokeSprite) {
-    console.log(pokeSprite)
     return (
       <div className="pokemonIcons">
         {pokeSprite?.species.map((pokemon, i) => (
           <>
             <div
-              onClick={() => valueSearch(pokemon.id, pokemon.species.name)}
+              onClick={() => valueSearch(pokemon.id, pokemon.name)}
               key={pokemon.id}
               className="icon"
             >
