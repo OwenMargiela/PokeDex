@@ -46,7 +46,7 @@ You can search for a Pokemon by entering its name or number in the search bar. T
 
 ## Home Page
 ![Screenshot (9)](https://user-images.githubusercontent.com/114600833/229611793-210bf052-e796-4bc7-afdb-cea70edb855f.png)
-The Search form takes both Pokemon names and pokeded number.Pokemon with multiple forms eg. Deoxys should be searched using there pokedex number.
+-The Search form takes both Pokemon names and pokeded number.Pokemon with multiple forms eg. Deoxys should be searched using there pokedex number.
 
 
 
