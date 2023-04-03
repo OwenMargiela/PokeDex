@@ -39,16 +39,14 @@ You can search for a Pokemon by entering its name or number in the search bar. T
 ## Acknowledgments
 
 - The PokeAPI team for providing the Pokemon data.
-- The React team for![Screenshot (9)](https://user-images.githubusercontent.com/114600833/229611776-9b7b4940-4598-4232-a0a0-7f8928b59035.png)
- creating such a powerful and flexible library.
+- The React team creating such a powerful and flexible library.
 - AC1design at https://dribbble.com/shots/15128634-Pokemon-Pokedex-Website-Redesign-Concept for the GUI inspiration
 
 
 
-
-
-
+## Home Page
 ![Screenshot (9)](https://user-images.githubusercontent.com/114600833/229611793-210bf052-e796-4bc7-afdb-cea70edb855f.png)
+The Search form takes both Pokemon names and pokeded number.Pokemon with multiple forms eg. Deoxys should be searched using there pokedex number.
 
 
 
