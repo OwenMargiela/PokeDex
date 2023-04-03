@@ -9,7 +9,7 @@ This is a simple Pokedex application built with React. It allows you to search a
 
 ## Getting Started
 
-To get started with this application, you can either clone the repository or download the zip file.
+To get started with this application, you can either clone the repository 
 
 ### Prerequisites
 
