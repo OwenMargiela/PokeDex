@@ -4,7 +4,6 @@ import { Link, useParams } from "react-router-dom";
 import { boxArt } from "../../GameBoxArt";
 import "./Generation.css";
 import PokeSprites from "../../Components/PokeSprites";
-import MovesTable from "../../Components/MovesTable/MovesTable";
 
 function Generation({ valueSearch }) {
   const { id } = useParams();
@@ -29,7 +28,9 @@ function Generation({ valueSearch }) {
     });
   }
   async function getSpecies(res) {
-    const requests = res.map((obj) => axios.get(obj.url));
+    const requests = res.map((obj) =>
+      axios.get(obj.url)
+    );
 
     Promise.all(requests)
       .then((responses) => {
@@ -39,13 +40,14 @@ function Generation({ valueSearch }) {
           ...prevState,
           entry: data,
         }));
-        getSpriteandName(data);
+        getSpriteandName(data)
       })
       .catch((error) => {
         console.error(error);
       });
   }
   async function getSpriteandName(res) {
+    
     const requests = res.map((obj) =>
       axios.get(`https://pokeapi.co/api/v2/pokemon/${obj.id}/`)
     );
@@ -62,13 +64,15 @@ function Generation({ valueSearch }) {
       .catch((error) => {
         console.error(error);
       });
+
   }
+
 
   useEffect(() => {
     getRegionData();
   }, []);
   if (pokeSprite?.species) {
-    console.log(pokeSprite.species);
+    console.log(pokeSprite.species)
     return (
       <>
         <h2>{regionData?.main_region.name.toUpperCase()}</h2>
@@ -85,14 +89,44 @@ function Generation({ valueSearch }) {
           ))}
           <h2>Games</h2>
           <div className="games">
-            {boxArt
-              .filter((art) => art.region === regionData?.main_region.name)
-              .map((boxArt) => (
-                <img className="boxArt" src={boxArt.path} alt="" srcset="" />
+
+          {boxArt
+            .filter((art) => art.region === regionData?.main_region.name)
+            .map((boxArt) => (
+              <img className="boxArt" src={boxArt.path} alt="" srcset="" />
               ))}
-          </div>
+              </div>
           <div className="movesLearned">
-            <MovesTable sortedMoves={sortedMoves}></MovesTable>
+            <h2>New Moves</h2>
+            <table className="center">
+              <tbody>
+                <tr>
+                  <th>Name</th>
+                  <th>Power</th>
+                  <th>Accuracy</th>
+                  <th>Type</th>
+                  <th>Damage Class</th>
+                  <th>PP</th>
+                  <th>Genration</th>
+                </tr>
+
+                {sortedMoves?.map((move) => (
+                  <>
+                    <tr>
+                      <Link to={`/moves/${move.name}`}>
+                        <td>{move.name}</td>
+                      </Link>
+                      <td>{move.power}</td>
+                      <td>{move.accuracy}</td>
+                      <td className={move.type.name}>{move.type.name}</td>
+                      <td>{move.damage_class.name}</td>
+                      <td>{move.pp}</td>
+                      <td>{move.generation.name}</td>
+                    </tr>
+                  </>
+                ))}
+              </tbody>
+            </table>
           </div>
           <PokeSprites
             valueSearch={valueSearch}

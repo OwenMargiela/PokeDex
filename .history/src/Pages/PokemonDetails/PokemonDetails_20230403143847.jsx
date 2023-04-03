@@ -121,8 +121,17 @@ function PokemonDetails({ pokeEntry, pokedexText, moves }) {
                     src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokeEntry.entry.id}.png`}
                     alt=""
                   />
-                  
-                  <FlexType item={pokeEntry.entry.types} ></FlexType>
+                  <div className="types">
+                    <ul className="typesList-abilitiesList">
+                      {pokeEntry.entry.types.map((type, i) => (
+                        <li className="type" key={i}>
+                          <Link to={`/type/${type.type.name}`}>
+                            {type.type.name}
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
 
                   {showModal && (
                     <div className="modal">
@@ -400,6 +409,7 @@ function PokemonDetails({ pokeEntry, pokedexText, moves }) {
                       src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${item.id}.png`}
                       alt=""
                     />
+
                     <FlexType item={item.types}></FlexType>
                     <BaseStats item={item.stats}></BaseStats>
                   </div>

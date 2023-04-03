@@ -177,13 +177,9 @@ th{
 .flexTypes{
     display: flex;
     flex-direction: row;
-    font-size: 1.5rem;
-    align-items: center;
-}
-.flexTypes > li {
-    margin-left: 1rem;
-}
+    font-size: 1rem;
 
+}
 .form{
     display: flex;
     flex-direction: column;

@@ -5,7 +5,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "react-router-dom";
 import BaseStats from "../../Components/BaseStats/BaseStats";
 import Ability from "../../Components/Abilty/Ability";
-import FlexType from "../../Components/FlexTypes/FlexType";
 
 function PokemonDetails({ pokeEntry, pokedexText, moves }) {
   if (pokedexText && pokeEntry.species) {
@@ -121,8 +120,17 @@ function PokemonDetails({ pokeEntry, pokedexText, moves }) {
                     src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokeEntry.entry.id}.png`}
                     alt=""
                   />
-                  
-                  <FlexType item={pokeEntry.entry.types} ></FlexType>
+                  <div className="types">
+                    <ul className="typesList-abilitiesList">
+                      {pokeEntry.entry.types.map((type, i) => (
+                        <li className="type" key={i}>
+                          <Link to={`/type/${type.type.name}`}>
+                            {type.type.name}
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
 
                   {showModal && (
                     <div className="modal">
@@ -400,7 +408,20 @@ function PokemonDetails({ pokeEntry, pokedexText, moves }) {
                       src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${item.id}.png`}
                       alt=""
                     />
-                    <FlexType item={item.types}></FlexType>
+                    <div className="types">
+                      <ul className="flexTypes">
+                        {item.types.map((type, i) => (
+                          <li className="type" key={i}>
+                            <Link to={`/type/${type.type.name}`}>
+                              <div className={`${type.type.name}`}>
+                                {type.type.name}
+                              </div>
+                            </Link>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+
                     <BaseStats item={item.stats}></BaseStats>
                   </div>
                 ))}

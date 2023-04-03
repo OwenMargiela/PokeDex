@@ -5,7 +5,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "react-router-dom";
 import BaseStats from "../../Components/BaseStats/BaseStats";
 import Ability from "../../Components/Abilty/Ability";
-import FlexType from "../../Components/FlexTypes/FlexType";
 
 function PokemonDetails({ pokeEntry, pokedexText, moves }) {
   if (pokedexText && pokeEntry.species) {
@@ -121,8 +120,17 @@ function PokemonDetails({ pokeEntry, pokedexText, moves }) {
                     src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokeEntry.entry.id}.png`}
                     alt=""
                   />
-                  
-                  <FlexType item={pokeEntry.entry.types} ></FlexType>
+                  <div className="types">
+                    <ul className="typesList-abilitiesList">
+                      {pokeEntry.entry.types.map((type, i) => (
+                        <li className="type" key={i}>
+                          <Link to={`/type/${type.type.name}`}>
+                            {type.type.name}
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
 
                   {showModal && (
                     <div className="modal">
@@ -194,7 +202,7 @@ function PokemonDetails({ pokeEntry, pokedexText, moves }) {
               </div>
 
               <BaseStats item={pokeEntry.entry.stats}></BaseStats>
-              <Ability abilities={pokeEntry?.entry.abilities}></Ability>
+              <Ability abilities ={pokeEntry?.entry.abilities}></Ability>
 
               <div className="pokedexEntries">
                 <h2>POKEDEX ENTRY</h2>
@@ -392,16 +400,57 @@ function PokemonDetails({ pokeEntry, pokedexText, moves }) {
                 {formData.map((item, index) => (
                   <div className="form" key={index}>
                     <h1>{item.name}</h1>
-
-                    <Ability abilities={item?.abilities}></Ability>
+                   
+                    <Ability abilities ={item?.abilities}></Ability>
 
                     <img
                       className="officialArtWork"
                       src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${item.id}.png`}
                       alt=""
                     />
-                    <FlexType item={item.types}></FlexType>
-                    <BaseStats item={item.stats}></BaseStats>
+                    <div className="types">
+                      <ul className="flexTypes">
+                        {item.types.map((type, i) => (
+                          <li className="type" key={i}>
+                            <Link to={`/type/${type.type.name}`}>
+                              <div className={`${type.type.name}`}>
+                                {type.type.name}
+                              </div>
+                            </Link>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                    {/* <div className="baseStats">
+                      <table className="statsTable">
+                        <tbody>
+                          {item.stats.map((stat) => (
+                            <tr>
+                              <td>{stat.stat.name}</td>
+                              <td>{stat.base_stat}</td>
+                              <td>
+                                <div
+                                  class="bar-chart"
+                                  style={{
+                                    width: `${stat.base_stat * 1.5}` + "px",
+                                    height: 12 + "px",
+                                  }}
+                                ></div>
+                              </td>
+                            </tr>
+                          ))}
+                        </tbody>
+                        <h2>
+                          Total :{" "}
+                          {item.stats.reduce(
+                            (accumulator, currentValue) =>
+                              (accumulator += currentValue.base_stat),
+                            0
+                          )}
+                        </h2>
+                      </table>
+                    </div> */}
+                    <BaseStats item={item.stats} ></BaseStats>
                   </div>
                 ))}
               </div>
