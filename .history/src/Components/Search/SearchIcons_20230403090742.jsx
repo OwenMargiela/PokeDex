@@ -9,9 +9,8 @@ function SearchIcons({ pokeEntry, valueSearch, pagination, nextUrl, prevUrl }) {
     // console.log(pokeEntry.species[0].sprites.front_default);
     return (
       <>
-      <main className="leftSide">
-
-        {/* <div className="prevAndNext">
+        <main className="leftSide">
+          {/* <div className="prevAndNext">
           <button className="next-btn paginators" onClick={() => pagination(prevUrl)}>
           
           prev
@@ -22,26 +21,25 @@ function SearchIcons({ pokeEntry, valueSearch, pagination, nextUrl, prevUrl }) {
           
           </button>
         </div> */}
-        
-        <PokeSprites
+          <PokeSprites
             valueSearch={valueSearch}
-            pokeSprite={pokeEntry}
+            pokeSprite={pokeSprite}
           ></PokeSprites>
-        <div className="prevAndNext">
-          <button
-            className="next-btn paginators"
-            onClick={() => pagination(prevUrl)}
+          <div className="prevAndNext">
+            <button
+              className="next-btn paginators"
+              onClick={() => pagination(prevUrl)}
             >
-            prev
-          </button>
-          <button
-            className="prev-btn paginators"
-            onClick={() => pagination(nextUrl)}
+              prev
+            </button>
+            <button
+              className="prev-btn paginators"
+              onClick={() => pagination(nextUrl)}
             >
-            next
-          </button>
-        </div>
-            </main>
+              next
+            </button>
+          </div>
+        </main>
       </>
     );
   }

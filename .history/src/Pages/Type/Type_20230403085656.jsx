@@ -83,7 +83,9 @@ function Type({ valueSearch }) {
             <div className="typesFlex">
               {typeData.damage_relations.double_damage_to?.map((type, i) => (
                 <div className={type.name} key={i}>
-                  <Link to={`/type/${type.name}`}>{type.name}</Link>
+                  <Link to={`/type/${type.name}`}>
+                  {type.name}
+                  </Link>
                 </div>
               ))}
             </div>
@@ -91,7 +93,9 @@ function Type({ valueSearch }) {
             <div className="typesFlex">
               {typeData.damage_relations.half_damage_to?.map((type, i) => (
                 <div className={type.name} key={i}>
-                  <Link to={`/type/${type.name}`}>{type.name}</Link>
+                  <Link to={`/type/${type.name}`}>
+                  {type.name}
+                  </Link>
                 </div>
               ))}
             </div>
@@ -100,7 +104,9 @@ function Type({ valueSearch }) {
             <div className="typesFlex">
               {typeData.damage_relations.no_damage_to?.map((type, i) => (
                 <div className={type.name} key={i}>
-                  <Link to={`/type/${type.name}`}>{type.name}</Link>
+                  <Link to={`/type/${type.name}`}>
+                  {type.name}
+                  </Link>
                 </div>
               )) || "none"}
             </div>
@@ -110,7 +116,9 @@ function Type({ valueSearch }) {
             <div className="typesFlex">
               {typeData.damage_relations.double_damage_from?.map((type, i) => (
                 <div className={type.name} key={i}>
-                  <Link to={`/type/${type.name}`}>{type.name}</Link>
+                  <Link to={`/type/${type.name}`}>
+                  {type.name}
+                  </Link>
                 </div>
               )) || "none"}
             </div>
@@ -118,7 +126,9 @@ function Type({ valueSearch }) {
             <div className="typesFlex">
               {typeData.damage_relations.half_damage_from?.map((type, i) => (
                 <div className={type.name} key={i}>
-                  <Link to={`/type/${type.name}`}>{type.name}</Link>
+                  <Link to={`/type/${type.name}`}>
+                  {type.name}
+                  </Link>
                 </div>
               )) || "none"}
             </div>
@@ -126,7 +136,9 @@ function Type({ valueSearch }) {
             <div className="typesFlex">
               {typeData.damage_relations.no_damage_from?.map((type, i) => (
                 <div className={type.name} key={i}>
-                  <Link to={`/type/${type.name}`}>{type.name}</Link>
+                  <Link to={`/type/${type.name}`}>
+                  {type.name}
+                  </Link>
                 </div>
               )) || "none"}
             </div>
@@ -166,10 +178,37 @@ function Type({ valueSearch }) {
           </div>
 
           <h2>Pokemon</h2>
-          <PokeSprites
-            valueSearch={valueSearch}
-            pokeSprite={pokeSprite}
-          ></PokeSprites>
+          {/* <div className="pokemonIcons">
+            {pokeSprite?.species.map((pokemon, i) => (
+              
+              <>
+                <div
+                  onClick={() => valueSearch(pokemon.name)}
+                  key={pokemon.id}
+                  className="icon"
+                >
+                  <Link className="iconSprite" to={`/`}>
+                    <img src={pokemon.sprites.front_default} />
+                  </Link>
+                  <p className="iconName">{pokemon.name}</p>
+                  <div className="typeContainer">
+                    <p className={pokemon.types[0].type.name}>
+                      {pokemon.types[0].type.name}
+                    </p>
+
+                    {pokemon.types[1]?.type.name && (
+                      <p className={pokemon.types[1].type.name}>
+                        {pokemon.types[1]?.type.name}
+                      </p>
+                    )}
+                  </div>
+                </div>
+              </>
+            ))}
+          </div> */}
+          <PokeSprites valueSearch={valueSearch} pokeSprite={pokeSprite}>
+            
+          </PokeSprites>
         </main>
       </>
     );

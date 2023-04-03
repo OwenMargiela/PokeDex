@@ -3,7 +3,6 @@ import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { boxArt } from "../../GameBoxArt";
 import "./Generation.css";
-import PokeSprites from "../../Components/PokeSprites";
 
 function Generation({ valueSearch }) {
   const { id } = useParams();
@@ -125,10 +124,34 @@ function Generation({ valueSearch }) {
               </tbody>
             </table>
           </div>
-          <PokeSprites
-            valueSearch={valueSearch}
-            pokeSprite={pokeSprite}
-          ></PokeSprites>
+          <div className="pokemonIcons">
+            {pokeSprite?.species.map((pokemon, i) => (
+            
+              <>
+                <div
+                  onClick={() => valueSearch(pokemon.name)}
+                  key={pokemon.id}
+                  className="icon"
+                >
+                  <Link className="iconSprite" to={`/`}>
+                    <img src={pokemon.sprites.front_default} />
+                  </Link>
+                  <p className="iconName">{pokemon.name}</p>
+                  <div className="typeContainer">
+                    <p className={pokemon.types[0].type.name}>
+                      {pokemon.types[0].type.name}
+                    </p>
+
+                    {pokemon.types[1]?.type.name && (
+                      <p className={pokemon.types[1].type.name}>
+                        {pokemon.types[1]?.type.name}
+                      </p>
+                    )}
+                  </div>
+                </div>
+              </>
+            ))}
+          </div>
         </main>
       </>
     );

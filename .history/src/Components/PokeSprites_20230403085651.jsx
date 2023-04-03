@@ -13,7 +13,7 @@ function PokeSprites({pokeSprite ,valueSearch}) {
               className="icon"
             >
               <Link className="iconSprite" to={`/`}>
-                <img src={pokemon?.sprites?.front_default} />
+                <img src={pokemon.sprites.front_default} />
               </Link>
               <p className="iconName">{pokemon.name}</p>
               <div className="typeContainer">
@@ -30,7 +30,6 @@ function PokeSprites({pokeSprite ,valueSearch}) {
             </div>
           </>
         ))}
-        
       </div>
     );
   }

@@ -28,9 +28,7 @@ function Generation({ valueSearch }) {
     });
   }
   async function getSpecies(res) {
-    const requests = res.map((obj) =>
-      axios.get(obj.url)
-    );
+    const requests = res.map((obj) => axios.get(obj.url));
 
     Promise.all(requests)
       .then((responses) => {
@@ -38,16 +36,15 @@ function Generation({ valueSearch }) {
 
         SetPokeSprite((prevState) => ({
           ...prevState,
-          entry: data,
+          species: data,
         }));
-        getSpriteandName(data)
+        getSpriteandName(data);
       })
       .catch((error) => {
         console.error(error);
       });
   }
   async function getSpriteandName(res) {
-    
     const requests = res.map((obj) =>
       axios.get(`https://pokeapi.co/api/v2/pokemon/${obj.id}/`)
     );
@@ -56,23 +53,21 @@ function Generation({ valueSearch }) {
       .then((responses) => {
         const data = responses.map((response) => response.data);
 
-        SetPokeSprite((entry) => ({
-          ...entry,
-          species: data,
+        SetPokeSprite((species) => ({
+          ...species,
+          sprite: data,
         }));
       })
       .catch((error) => {
         console.error(error);
       });
-
   }
-
 
   useEffect(() => {
     getRegionData();
   }, []);
-  if (pokeSprite?.species) {
-    console.log(pokeSprite.species)
+  if (pokeSprite?.sprite) {
+    console.log(pokeSprite.sprite);
     return (
       <>
         <h2>{regionData?.main_region.name.toUpperCase()}</h2>

@@ -22,7 +22,29 @@ function SearchIcons({ pokeEntry, valueSearch, pagination, nextUrl, prevUrl }) {
           
           </button>
         </div> */}
-        
+        <div className="pokemonIcons ">
+          {pokeEntry.species.map((entry) => (
+            <div
+            onClick={() => valueSearch(entry.name)}
+            key={entry.id}
+            className="icon"
+            >
+              <img className="iconSprite" src={entry.sprites.front_default} />
+              <p className="iconName">{entry.name}</p>
+              <div className="typeContainer">
+                <p className={entry.types[0].type.name}>
+                  {entry.types[0].type.name}
+                </p>
+
+                {entry.types[1]?.type.name && (
+                  <p className={entry.types[1].type.name}>
+                    {entry.types[1]?.type.name}
+                  </p>
+                )}
+              </div>
+            </div>
+          ))}
+        </div>
         <PokeSprites
             valueSearch={valueSearch}
             pokeSprite={pokeEntry}
