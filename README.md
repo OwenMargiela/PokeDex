@@ -34,14 +34,22 @@ You can search for a Pokemon by entering its name or number in the search bar. T
 - React - A JavaScript library for building user interfaces.
 - PokeAPI - A RESTful API for Pokemon data.
 
-## Authors
 
-- John Doe - Initial work
 
 ## Acknowledgments
 
 - The PokeAPI team for providing the Pokemon data.
-- The React team for creating such a powerful and flexible library.
+- The React team for![Screenshot (9)](https://user-images.githubusercontent.com/114600833/229611776-9b7b4940-4598-4232-a0a0-7f8928b59035.png)
+ creating such a powerful and flexible library.
 - AC1design at https://dribbble.com/shots/15128634-Pokemon-Pokedex-Website-Redesign-Concept for the GUI inspiration
+
+
+
+
+
+
+![Screenshot (9)](https://user-images.githubusercontent.com/114600833/229611793-210bf052-e796-4bc7-afdb-cea70edb855f.png)
+
+
 
 
