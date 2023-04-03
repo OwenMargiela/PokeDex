@@ -179,7 +179,10 @@ function Type({ valueSearch }) {
           <h2>Pokemon</h2>
           <div className="pokemonIcons">
             {pokeSprite?.species.map((pokemon, i) => (
-              
+              // <div className="Sprite" key={i}>
+              //   <img src={pokemon.sprites.front_default} alt="" />
+              //   <p>{pokemon.name}</p>
+              // </div>
               <>
                 <div
                   onClick={() => valueSearch(pokemon.name)}

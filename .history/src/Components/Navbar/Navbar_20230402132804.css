@@ -1,6 +1,7 @@
 .navigationList {
     display: flex;
-    justify-content: space-between;
+    align-items: center;
+    justify-content: space-around;
   }
   .listItem {
     font-size: 0.8rem;
@@ -35,7 +36,7 @@
   
   @media screen and (max-width:425px) {
       .listItem{
-          font-size: 1rem;
+          font-size: 0.6rem;
       }
       
   }

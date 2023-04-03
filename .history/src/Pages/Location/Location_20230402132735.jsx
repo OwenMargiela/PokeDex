@@ -14,7 +14,7 @@ function Location({valueSearch}) {
         `https://pokeapi.co/api/v2/location-area/${id}/`
       );
       SetLocationData(data.pokemon_encounters);
-    
+    =
 
       getSpriteAndNAme(data.pokemon_encounters);
     }
