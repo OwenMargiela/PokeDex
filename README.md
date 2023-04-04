@@ -9,7 +9,7 @@ This is a simple Pokedex application built with React. It allows you to search a
 
 ## Getting Started
 
-To get started with this application, you can either clone the repository or download the zip file.
+To get started with this application, you can either clone the repository 
 
 ### Prerequisites
 
@@ -34,14 +34,21 @@ You can search for a Pokemon by entering its name or number in the search bar. T
 - React - A JavaScript library for building user interfaces.
 - PokeAPI - A RESTful API for Pokemon data.
 
-## Authors
 
-- John Doe - Initial work
 
 ## Acknowledgments
 
 - The PokeAPI team for providing the Pokemon data.
-- The React team for creating such a powerful and flexible library.
+- The React team creating such a powerful and flexible library.
 - AC1design at https://dribbble.com/shots/15128634-Pokemon-Pokedex-Website-Redesign-Concept for the GUI inspiration
+
+
+
+## Home Page
+![Screenshot (9)](https://user-images.githubusercontent.com/114600833/229611793-210bf052-e796-4bc7-afdb-cea70edb855f.png)
+- The search form accepts both the names of Pokemon and their Pokedex numbers. For Pokemon with multiple forms, such as Deoxys, their Pokedex number should be used for the search.
+- To see the rest of the pokeIcons, hover over the left side of the screen and use a double-finger scrolling gesture.
+
+
 
 
