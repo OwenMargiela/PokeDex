@@ -12,10 +12,10 @@ function Navbar() {
             <Link to={"/"}>
               <li className="listItem selectedHoverEffect">Pokedex</li>
             </Link>
-            <li className="listItem selectedHoverEffect">
-              {/* <Dropdown></Dropdown> */}
+            <li className="listItem selectedHoverEffect not-allowed">
+              <Dropdown></Dropdown>
             </li>
-            <Link to={"/type/water"}>
+            <Link to={"/type/fire"}>
               <li className="listItem selectedHoverEffect">type</li>
             </Link>
           </ul>

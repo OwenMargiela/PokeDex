@@ -22,6 +22,7 @@ const Dropdown = () => {
       borderRadius: "10px",
       borderColor: "transparent",
       boxShadow: "none",
+      cursor: "not-allowed",
       "&:hover": {
         borderColor: "transparent",
       },
