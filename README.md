@@ -1,5 +1,5 @@
 # PokeDex
-
+First React Project
 # React Pokedex Application
 
 This is a simple Pokedex application built with React. It allows you to search and view information about different Pokemon.
