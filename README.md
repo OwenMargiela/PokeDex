@@ -1,7 +1,4 @@
 # PokeDex
-First Ever React Project
-
-
 
 # React Pokedex Application
 
